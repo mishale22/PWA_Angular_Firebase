@@ -1,0 +1,17 @@
+<div *ngIf="libro.id else crear">
+    <h3>Editing {{libro.name}}</h3>
+</div>
+
+  <div class="form-group">
+    <label for="name">Nombre: </label>
+    <input class="form-control" type="text" id="name" name="name" [(ngModel)]="libro.name" />
+  </div>
+  <div class="form-group">
+    <label for="name">Autor: </label>
+    <input class="form-control" type="text" id="author" name="name" [(ngModel)]="libro.author" />
+  </div>
+  <button (click)="onSave(this.libro)" class="btn btn-info">Save</button>
+
+<ng-template #crear>
+  <h3>Nuevo Libro</h3>
+</ng-template>
